@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Number Smash</title>
+  <title>Delete Dilemma</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23ff7a59'/%3E%3Ctext x='50' y='65' font-size='48' text-anchor='middle' fill='white'%3E3%3C/text%3E%3C/svg%3E">
 
   <link rel="stylesheet" href="style.css" />
@@ -12,11 +12,19 @@
 <body>
 <div class="app">
 <div class="container">
-  <h1>🎨 Number Smash</h1>
+  <h1>🎨 Delete Dilemma</h1>
+      <a   id="howToPlay">How to Play?</a>
+      <hr/>
 
   <div class="top-bar">
-    <div class="score">Score: <span id="score">0</span></div>
-    <a id="howToPlay">How to Play?</a>
+  <div class="level-div">
+    Level: <span id="level">1</span> 
+    </div>
+    <div class="score-div">
+  · Score: <span id="score">0</span>
+  </div>
+
+
   </div>
 
   <div class="grid" id="grid"></div>
@@ -43,8 +51,13 @@
       • Click on any number <b>x</b> to collect points.<br><br>
       • Your score increases by:<br>
         <b>x × (how many times x appears)</b><br><br>
+<b>Example:</b><br>
+If you click on <b>3</b> and there are <b>three 3s</b> on the grid,<br>
+your score increases by <b>3 × 3 = 9</b> points.<br><br>
       • After clicking <b>x</b>, all cells containing:<br>
-        <b>x, x − 1, and x + 1</b> are removed from the grid.<br><br>
+        <b>x, x − 1, and x + 1</b> are removed from the grid.<br><br><b>Example:</b><br>
+If you click on <b>3</b>, then all <b>2</b>, <b>3</b>, and <b>4</b>
+tiles will disappear.<br><br>
       • The game ends when the grid becomes empty.<br><br>
       • Try to reach the <b>optimal score</b> using smart choices!
     </p>
@@ -59,6 +72,8 @@
   </a>
 </footer>
 </div>
+<div id="confetti"></div>
+
 <script src="script.js"></script>
 </body>
 </html>
